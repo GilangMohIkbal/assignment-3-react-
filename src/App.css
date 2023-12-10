@@ -6,9 +6,9 @@ img:hover {
 img.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
-.home {
+/* .home {
   height: 80vh;
-}
+} */
 
 .home .kiri {
   width: 40%;

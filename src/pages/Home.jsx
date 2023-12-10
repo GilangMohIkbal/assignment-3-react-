@@ -1,15 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default class Home extends React.Component {
   render() {
     return (
       <div
-        className="container home text-center d-flex justify-content-center align-items-center "
+        className="container mt-5 text-center d-flex justify-content-center align-items-center "
         style={{ maxWidth: "1000px" }}
       >
         {/* Left Column  */}
         <div className="left-column d-flex flex-lg-grow-1 flex-column align-items-lg-start text-lg-start align-items-center text-center">
-          <h4 className="text-success">Student at Hactiv8</h4>
+          <h4 className="text-success">
+            Student at <span className="text-warning fw-bold">Hactiv8</span>
+          </h4>
           <h1 className="text-primary fw-bold">
             REACT JS{" "}
             <span className="text-muted" style={{ fontSize: "24px" }}>
@@ -19,7 +22,9 @@ export default class Home extends React.Component {
           <h1 className="text-primary fw-bold">REACT NATIVE BASIC</h1>
 
           <div className="d-flex flex-sm-row flex-column align-items-center mx-lg-0 mx-auto justify-content-center gap-3">
-            <button className="btn text-white btn-success">About Me</button>
+            <Link to="/about" className="btn text-white btn-success mt-3">
+              About Me
+            </Link>
           </div>
         </div>
         {/* <!-- Right Column --> */}

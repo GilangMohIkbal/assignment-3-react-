@@ -1,10 +1,8 @@
 import React from "react";
 import { getData } from "../exp";
 import { useNavigate } from "react-router";
-import { Outlet } from "react-router-dom";
-import withRouter from "./WithRouter";
-
-export default class Experience extends React.Component {
+import { Outlet, redirect } from "react-router-dom";
+class Experience extends React.Component {
   state = {
     data: [],
   };
@@ -12,9 +10,8 @@ export default class Experience extends React.Component {
     const data = getData();
     this.setState({ data });
   }
-  submitData(item) {
-    const { navigate } = this.props;
-    navigate(`${item.id}`);
+  redirectTo(item) {
+    return `/experience/${item.id}`;
   }
   render() {
     return (
@@ -33,12 +30,12 @@ export default class Experience extends React.Component {
                           <h5 className="font-size-16">{item.name}</h5>
                           <p className="text-muted">{item.about}</p>
                           <div>
-                            <button
+                            <a
                               className="btn btn-primary btn-sm"
-                              onClick={() => this.submitData(item)}
+                              href={this.redirectTo(item)}
                             >
-                              Lihat Detail
-                            </button>
+                              Lihat detail
+                            </a>
                           </div>
                         </div>
                       </li>
@@ -54,3 +51,4 @@ export default class Experience extends React.Component {
     );
   }
 }
+export default Experience;

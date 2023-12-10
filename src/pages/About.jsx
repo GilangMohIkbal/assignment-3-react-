@@ -4,8 +4,8 @@ import gambar from "../assets/foto.jpg";
 export default class Home extends React.Component {
   render() {
     return (
-      <div className="container home text-center d-flex justify-content-center align-items-center flex-column">
-        <h1 className="fw-bold text-primary">ABOUT ME</h1>
+      <div className="container home text-center d-flex justify-content-center align-items-center flex-column mt-5">
+        <h2 className="fw-bold text-success">ABOUT ME</h2>
         <div className="d-flex deskop">
           <div className="kiri">
             <img
@@ -23,11 +23,10 @@ export default class Home extends React.Component {
           <div className="kanan">
             <p>
               Selamat datang di portofolio saya! Saya adalah seorang pengembang
-              Front-end yang bersemangat dan berpengalaman dalam menciptakan
-              pengalaman web yang menarik dan fungsional. Di sini, Anda akan
-              menemukan proyek-proyek terbaru saya, keterampilan yang saya
-              kuasai, dan pengalaman yang telah saya dapatkan dalam dunia
-              pengembangan web.
+              Front-end dan baru memulai dalam menciptakan pengalaman web yang
+              menarik dan fungsional. Di sini, Anda akan menemukan proyek-proyek
+              terbaru saya, keterampilan yang saya kuasai, dan pengalaman yang
+              telah saya dapatkan dalam dunia pengembangan web.
             </p>
           </div>
         </div>
